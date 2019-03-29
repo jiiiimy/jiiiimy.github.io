@@ -1,0 +1,24 @@
+html{
+	height: 100%;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	background-color: yellow;
+	display: block;
+	overflow: hidden;
+}
+
+.test{
+	height: 10%;
+	width: 100%;
+}
+
+.test1{
+	height: 100%;
+	width: 24%;
+	margin: 0;
+	display: inline-block;
+}
