@@ -1,0 +1,103 @@
+html body{
+	margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+}
+
+.content{
+  width: 300px;
+	height: 100vh;
+  background-color: navy;
+	position: fixed;
+	display: flex;
+	flex-basis: auto;
+	flex-direction: column;
+	flex-shrink: 0;
+  justify-content: space-between;
+}
+
+.work-tab {
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.work-tab h1{
+  margin: 10px 0 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+
+input[name="tab-item"] {
+  display: none;
+}
+
+.tab-item {
+  width: 144px;
+  height: 122px;
+  margin: 1px 1px;
+  box-sizing: border-box;
+  background-color: #15A4F9;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.tab-item:hover {
+  color: yellow;
+  opacity: 0.5;
+}
+
+.tab-item img{
+  height: 45%;
+  position: absolute;
+  left: 30%;
+  bottom: 35px;
+}
+
+
+.tab-item p{
+  margin: 0 0 2px 3px;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+#a1:checked ~ #b1,
+#a2:checked ~ #b2,
+#a3:checked ~ #b3,
+#a4:checked ~ #b4,
+#a5:checked ~ #b5,
+#a6:checked ~ #b6,
+#a7:checked ~ #b7,
+#a8:checked ~ #b8,
+#a9:checked ~ #b9,
+#a10:checked ~ #b10 {
+  display: block;
+}
+
+.work-tab input:checked + .tab-item {
+  background-color: lightblue;
+}
+
+
+.work-tab-content {
+  width: calc(100% - 300px);
+  height: 100%;
+  overflow: hidden;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+iframe{
+  width: 100%;
+  height: 100vh;
+  border: none;
+}
+
