@@ -3,12 +3,72 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <script src="assets/js/jquery-2.2.2.min.js"></script>
+    <script>
+      $(function(){
+        $("#open-dialog1").on("click", function(){
+          //leftの値 = (ウィンドウ幅 -コンテンツ幅) ÷ 2
+          var leftPosition = (($(window).width() - $("#dialog1").outerWidth(true)) / 2);
+          $(".dialog1").fadeToggle(500);
+          //ダイアログを表示する
+          $("#dialog1").show();
+        });
+        //閉じるボタンで非表示
+        $(".dialog-close").on("click", function(){
+          $(this).parents(".dialog").hide();
+        });
+        $("#open-dialog2").on("click", function(){
+          //leftの値 = (ウィンドウ幅 -コンテンツ幅) ÷ 2
+          var leftPosition = (($(window).width() - $("#dialog2").outerWidth(true)) / 2);
+          $(".dialog2").fadeToggle(500);
+          //ダイアログを表示する
+          $("#dialog2").show();
+        });
+        //閉じるボタンで非表示
+        $(".dialog-close").on("click", function(){
+          $(this).parents(".dialog").hide();
+        });
+        $("#open-dialog3").on("click", function(){
+          //leftの値 = (ウィンドウ幅 -コンテンツ幅) ÷ 2
+          var leftPosition = (($(window).width() - $("#dialog3").outerWidth(true)) / 2);
+          $(".dialog3").fadeToggle(500);
+          //ダイアログを表示する
+          $("#dialog3").show();
+        });
+        //閉じるボタンで非表示
+        $(".dialog-close").on("click", function(){
+          $(this).parents(".dialog").hide();
+        });
+        $("#open-dialog4").on("click", function(){
+          //leftの値 = (ウィンドウ幅 -コンテンツ幅) ÷ 2
+          var leftPosition = (($(window).width() - $("#dialog4").outerWidth(true)) / 2);
+          $(".dialog4").fadeToggle(500);
+          //ダイアログを表示する
+          $("#dialog4").show();
+        });
+        //閉じるボタンで非表示
+        $(".dialog-close").on("click", function(){
+          $(this).parents(".dialog").hide();
+        });
+        $("#open-dialog5").on("click", function(){
+          //leftの値 = (ウィンドウ幅 -コンテンツ幅) ÷ 2
+          var leftPosition = (($(window).width() - $("#dialog5").outerWidth(true)) / 2);
+          $(".dialog5").fadeToggle(500);
+          //ダイアログを表示する
+          $("#dialog5").show();
+        });
+        //閉じるボタンで非表示
+        $(".dialog-close").on("click", function(){
+          $(this).parents(".dialog").hide();
+        });
+      });
+    </script>
   </head>
   <body>
     <div class="content" id="works">
         <div class="work-tab">
           <h1>営業ポータル</h1>
-          <input id="a1" type="radio" name="tab-item" checked>
+          <input id="a1" type="radio" name="tab-item">
           <label class="tab-item" for="a1">
             <img src="assets/img/icon-paperpen.png"><p>日報作成</p>
           </label>
@@ -40,6 +100,10 @@
           <label class="tab-item" for="a9">
             <img src="assets/img/icon-settingparts.png"><p>マスター管理</p>
           </label>
+          <input id="a10" type="radio" name="tab-item"checked>
+          <label class="tab-item" id="sub" for="a10">お知らせ<p>></p></label>
+          <input id="a11" type="radio" name="tab-item">
+          <label class="tab-item" id="sub" for="a11">営業活動管理<p>></p></label>
           <div class="work-tab-content" id="b1">
             <iframe src="http://172.17.1.170/ni/nisfa/main/index.php?p=schedulenippo"></iframe>
           </div>
@@ -62,8 +126,391 @@
             <iframe src="http://172.17.21.1:7001/?MSG_CONTEXT_NO=4&com.nec.jp.orteusActionMethod.orteusSubmitByLink=cont"></iframe>
           </div>
           <div class="work-tab-content" id="b9">
-            <iframe src="//www.sazaesan.jp/"></iframe>
+            <iframe src="http://172.17.21.1:7001/"></iframe>
           </div>
+          <div class="work-tab-content" id="b10">
+            <div class="work-tab-notice">
+              <h2>お知らせ一覧</h2>
+                <div class="left">
+                  <div class="box1">
+                    <div class="category">
+                      <section class="icon" id="red">
+                        <img src="assets/img/icon-paperplane.png">
+                      </section>
+                      <h3>お知らせ</h3>
+                      <div class="dialog" id="dialog1">
+                            <button type="button" class="dialog-close"><span>×</span></button>
+                        <div class="dialog-content">
+                          <div class="box1">
+                            <div class="category">
+                              <section class="icon" id="red">
+                                <img src="assets/img/icon-paperplane.png">
+                              </section>
+                              <h3>お知らせ</h3>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                              </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button id="open-dialog1"><span>すべて見る　＞</span></button>
+                    </div>
+                    <div class="notice">
+                      <label>総務より</label>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                      <span>2019/07/12</span>
+                    </div>
+                    <div class="notice">
+                      <label>総務より</label>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                      <span>2019/07/12</span>
+                    </div>
+                  </div>
+                  <div class="box2">
+                    <div class="category">
+                      <section class="icon" id="yellow">
+                        <img src="assets/img/icon-megaphone.png">
+                      </section>
+                      <h3>CSからの通知</h3>
+                      <div class="dialog" id="dialog2">
+                        <button type="button" class="dialog-close"><span>×</span></button>
+                        <div class="dialog-content">
+                          <div class="box1">
+                            <div class="category">
+                              <section class="icon" id="yellow">
+                                <img src="assets/img/icon-megaphone.png">
+                              </section>
+                              <h3>CSからの通知</h3>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                              </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                              <div class="notice">
+                                <label>総務より</label>
+                                <p>今日は経費申請の期限です。提出はお早めに。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button id="open-dialog2"><span>すべて見る　＞</span></button>
+                    </div>
+                    <div class="notice">
+                      <a href="">
+                        <label>総務より</label>
+                        <p>今日は経費申請の期限です。提出はお早めに。</p>
+                        <span>2019/07/12</span>
+                      </a>
+                    </div>
+                    <div class="notice">
+                      <a href="">
+                        <label>総務より</label>
+                        <p>今日は経費申請の期限です。提出はお早めに。</p>
+                        <span>2019/07/12</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="box3">
+                    <div class="category">
+                      <section class="icon" id="blue">
+                        <img src="assets/img/icon-new.png">
+                      </section>
+                      <h3>新商品のお知らせ</h3>
+                      <div class="dialog" id="dialog3">
+                        <button type="button" class="dialog-close"><span>×</span></button>
+                        <div class="dialog-content">
+                          <div class="box1">
+                            <div class="category">
+                              <section class="icon" id="blue">
+                                <img src="assets/img/icon-new.png">
+                              </section>
+                              <h3>新商品のお知らせ</h3>
+                            </div>
+                            <div class="notice">
+                              <label>△△医療機器</label>
+                              <p>7月からの新商品のお取り扱い</p>
+                              <span>2019/07/12</span>
+                            </div>
+                            <div class="notice">
+                              <label>△△医療機器</label>
+                              <p>7月からの新商品のお取り扱い</p>
+                              <span>2019/07/12</span>
+                            </div>
+                            <div class="notice">
+                              <label>△△医療機器</label>
+                              <p>7月からの新商品のお取り扱い</p>
+                              <span>2019/07/12</span>
+                            </div>
+                            <div class="notice">
+                              <label>△△医療機器</label>
+                              <p>7月からの新商品のお取り扱い</p>
+                              <span>2019/07/12</span>
+                            </div>
+                            <div class="notice">
+                              <label>△△医療機器</label>
+                              <p>7月からの新商品のお取り扱い</p>
+                              <span>2019/07/12</span>
+                            </div>
+                            <div class="notice">
+                              <label>△△医療機器</label>
+                              <p>7月からの新商品のお取り扱い</p>
+                              <span>2019/07/12</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button id="open-dialog3"><span>すべて見る　＞</span></button>
+                    </div>
+                    <div class="notice">
+                      <a href="">
+                        <label>△△医療機器</label>
+                        <p>7月からの新商品のお取り扱い</p>
+                        <span>2019/07/12</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="box1">
+                    <div class="category">
+                      <section class="icon" id="green">
+                        <img src="assets/img/icon-sandwatch.png">
+                      </section>
+                      <h3>3営業日以内に期日をむかえるもの</h3>
+                    </div>
+                    <div class="notice">
+                      <label>今日</label>
+                      <hr>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                    </div>
+                    <div class="notice">
+                      <label>7月15日〆</label>
+                      <hr>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                    </div>
+                    <div class="notice">
+                      <label>7月16日〆</label>
+                      <hr>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                      <p>今日は経費申請の期限です。提出はお早めに。</p>
+                    </div>
+                  </div>
+                  <div class="box2">
+                    <div class="category">
+                      <section class="icon" id="gray">
+                        <img src="assets/img/icon-check.png">
+                      </section>
+                      <h3>TODOリスト</h3>
+                    </div>
+                    <div>
+                      <ul>
+                        <li>A病院見積もり</li>
+                        <li>A病院見積もり</li>
+                        <li>A病院見積もり</li>
+                        <li>A病院見積もり</li>
+                        <li>A病院見積もり</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="work-tab-content" id="b11">
+            <div class="work-tab-sales">
+              <h2>営業活動管理一覧</h2>
+                <div class="left">
+                  <div class="box1">
+                    <div class="category">
+                      <section class="icon" id="red">
+                        <img src="assets/img/icon-chart.png">
+                      </section>
+                      <h3>受注</h3>
+                      <div class="dialog" id="dialog4">
+                        <button type="button" class="dialog-close"><span>×</span></button>
+                        <div class="dialog-content">
+                          <div class="box1">
+                            <div class="category">
+                              <section class="icon" id="red">
+                                <img src="assets/img/icon-chart.png">
+                              </section>
+                              <h3>受注</h3>
+                            </div>
+                            <img class="chart" src="assets/img/chart_uriage.png">
+                          </div>
+                        </div>
+                      </div>
+                      <button id="open-dialog4"><span>すべて見る　＞</span></button>
+                    </div>
+                    <img class="chart" src="assets/img/chart_uriage.png">
+                  </div>
+                  <div class="box2">
+                    <div class="category">
+                      <section class="icon" id="yellow">
+                        <img src="assets/img/icon-sandwatch.png">
+                      </section>
+                      <h3>納期</h3>
+                      <div class="dialog" id="dialog5">
+                        <button type="button" class="dialog-close"><span>×</span></button>
+                        <div class="dialog-content">
+                          <div class="box1">
+                            <div class="category">
+                              <section class="icon" id="yellow">
+                                <img src="assets/img/icon-sandwatch.png">
+                              </section>
+                              <h3>納期</h3>
+                            </div>
+                            <div class="notice">
+                                <label>見積もり</label>
+                                <p>M病院へ見積もりを提出してください。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                            <div class="notice">
+                                <label>出荷</label>
+                                <p>A病院へ出荷手配をしてください。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                            <div class="notice">
+                                <label>お客様</label>
+                                <p>B病院へ連絡してください。</p>
+                                <span>2019/07/12</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button id="open-dialog5"><span>すべて見る　＞</span></button>
+                    </div>
+                    <div class="notice">
+                      <a href="">
+                        <label>見積もり</label>
+                        <p>M病院へ見積もりを提出してください。</p>
+                        <span>2019/07/12</span>
+                      </a>
+                    </div>
+                    <div class="notice">
+                      <a href="">
+                        <label>出荷</label>
+                        <p>A病院へ出荷手配をしてください。</p>
+                        <span>2019/07/12</span>
+                      </a>
+                    </div>
+                    <div class="notice">
+                      <a href="">
+                        <label>お客様</label>
+                        <p>B病院へ連絡してください。</p>
+                        <span>2019/07/12</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="right">
+                  <div class="box1">
+                    <div class="category">
+                      <section class="icon" id="green">
+                        <img src="assets/img/icon-box.png">
+                      </section>
+                      <h3>出荷</h3>
+                    </div>
+                    <div class="notice">
+                      <label>今日</label>
+                      <hr>
+                      <p>M病院へ出荷予定</p>
+                      <p>N病院へ出荷予定</p>
+                    </div>
+                    <div class="notice">
+                      <label>7月15日〆</label>
+                      <hr>
+                      <p>X医院へ出荷済み</p>
+                      <p>Y医院へ出荷済み</p>
+                    </div>
+                    <div class="notice">
+                      <label>7月16日〆</label>
+                      <hr>
+                      <p>L病院へ出荷済み</p>
+                      <p>S病院へ出荷済み</p>
+                    </div>
+                  </div>
+                  <div class="box2">
+                    <div class="category">
+                      <section class="icon" id="gray">
+                        <img src="assets/img/icon-questionsheet.png">
+                      </section>
+                      <h3>履歴</h3>
+                    </div>
+                    <div>
+                      <ul>
+                        <li><span>13:20</span>A病院見積もり</li>
+                        <li><span>12:20</span>A病院見積もり</li>
+                        <li><span>11:20</span>A病院見積もり</li>
+                        <li><span>10:20</span>A病院見積もり</li>
+                        <li><span>9:20</span>A病院見積もり</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
       </div>
     </div>
   </body>
